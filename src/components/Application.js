@@ -6,7 +6,9 @@ import DayList from "./DayList.js";
 
 export default function Application(props) {
 
- 
+import Appointment from "components/Appointment";
+
+
     const [day, setDate] = useState("Monday");
   
   return (
@@ -22,8 +24,8 @@ export default function Application(props) {
 
 <DayList
   days={days}
-  day={day}
-  setDay={setDate}
+  value={day}
+  onChange={setDate}
 />
 
 </nav>
