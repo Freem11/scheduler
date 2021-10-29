@@ -153,7 +153,7 @@ storiesOf("Button", module)
   .add("Empty", () => (<Empty onAdd={action("onAdd")}/>))
   .add("Show", () => (<Show 
     student="Lydia Miller-Jones"
-    interviewer= {InterviewerList}
+    interviewer= {interviewer}
     onEdit={action("onEdit")}
     onDelete={action("onDelete")}
     />))

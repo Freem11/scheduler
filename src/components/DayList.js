@@ -14,6 +14,6 @@ export default function DayList(props) {
     );
   });
 
-  console.log(list)
+
   return <ul>{list}</ul>;
 }
