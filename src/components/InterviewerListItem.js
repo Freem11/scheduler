@@ -16,6 +16,7 @@ return (
    <li className={selected} onClick={() => props.onChange(props.id)}>
    <img className={image}
     src={props.avatar}
+    alt={props.name}
   />
    {props.selected && props.name}
   </li>
