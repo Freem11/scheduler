@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useReducer, useEffect } from "react";
 
 export default function useApplicationData(initial) {
-
   const SET_DAY = "SET_DAY";
   const SET_APPLICATION_DATA = "SET_APPLICATION_DATA";
   const SET_INTERVIEW = "SET_INTERVIEW";
@@ -44,12 +43,14 @@ export default function useApplicationData(initial) {
               });
             }
           });
-          const newDays = state.days.map(day => day.name === state.day ? {...day, spots:spotsRemaining} : day)
-          return newDays
+          const newDays = state.days.map((day) =>
+            day.name === state.day ? { ...day, spots: spotsRemaining } : day
+          );
+          return newDays;
         }
-        let spots = updateSpotsForDay(state.days, appointments, state.day)
+        let spots = updateSpotsForDay(state.days, appointments, state.day);
 
-        return { ...state, appointments: appointments, days:spots };
+        return { ...state, appointments: appointments, days: spots };
       default:
         throw new Error(
           `Tried to reduce with unsupported action type: ${action.type}`
@@ -85,16 +86,14 @@ export default function useApplicationData(initial) {
   }, []);
 
   function bookInterview(id, interview) {
-    return axios.put(`/api/appointments/${id}`, {interview}).then(() => {
-      dispatch({ type:SET_INTERVIEW, interview, id});
+    return axios.put(`/api/appointments/${id}`, { interview }).then(() => {
+      dispatch({ type: SET_INTERVIEW, interview, id });
     });
   }
 
   function cancelInterview(id) {
-    
     return axios.delete(`/api/appointments/${id}`).then(() => {
-      dispatch({ type:SET_INTERVIEW, interview: null, id});
-
+      dispatch({ type: SET_INTERVIEW, interview: null, id });
     });
   }
 
