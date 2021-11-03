@@ -6,18 +6,10 @@ Interview Scheduler is a full stack web application built with React, that allow
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+3. Start the developent server using the `npm start` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-## Setup
-
-Install dependencies with `npm install`.
-
-## Running Webpack Development Server
-
-```sh
-npm start
-```
+## Additional Setup
 
 ## Running Jest Test Framework
 
@@ -30,6 +22,7 @@ npm test
 ```sh
 npm run storybook
 ```
+
 ## Final Product
 
 !["Main Page"](https://github.com/Freem11/scheduler/blob/master/public/images/Main%20View.png)
@@ -38,9 +31,6 @@ npm run storybook
 
 !["Cancel Confirmation"](https://github.com/Freem11/scheduler/blob/master/public/images/Cancel%20Appointment.png)
 
-!["screenshot of map creation"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/creating_map.png?raw=true)
-
-!["screenshot of user profile"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/created_pins.png?raw=true)
 
 ## Dependencies
 
