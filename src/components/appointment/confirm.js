@@ -3,7 +3,7 @@ import Button from "../Button";
 
 export default function Empty(props) {
 
-  
+  console.log("myprops", props)
 
   return (
 <main className="appointment__card appointment__card--confirm">

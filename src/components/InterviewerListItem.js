@@ -12,7 +12,6 @@ export default function InterviewerListItem(props) {
 
  const image = classNames("interviewers__item-image")
 
- console.log("this one", props)
 return (
    <li className={selected} onClick={() => props.onChange(props.id)}>
    <img className={image}

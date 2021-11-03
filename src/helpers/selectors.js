@@ -12,6 +12,7 @@ export function getAppointmentsForDay(state, day) {
       });
     }
   });
+
   return finalArr;
 }
 
@@ -27,7 +28,6 @@ export function getInterview(state, interview) {
       finalObj.interviewer = state.interviewers[element];
     }
   }
-  console.log(finalObj);
 
   if (Object.keys(finalObj).length === 0) {
     finalObj = null;
@@ -40,10 +40,33 @@ export function getInterviewersForDay(state, day) {
 
   state.days.forEach((element) => {
     if (element.name === day) {
-
-      const intArr = element.interviewers
-        return intArr.map(int => {return finalArr.push(state.interviewers[int])})
+      const intArr = element.interviewers;
+      return intArr.map((int) => {
+        return finalArr.push(state.interviewers[int]);
+      });
     }
   });
+
   return finalArr;
+}
+
+export function updateSpotsForDay(days, appointments, day) {
+  let spotsRemaining = 0;
+
+  days.forEach((element, index) => {
+    if (element.name === day) {
+      element.appointments.forEach((microElement) => {
+        for (let key in appointments) {
+          if (key == microElement) {
+            if (appointments[key].interview === null) {
+              spotsRemaining++;
+            }
+          }
+        }
+      });
+      element.spots = spotsRemaining;
+      days[index] = element;
+    }
+  });
+  return days;
 }
