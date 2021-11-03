@@ -32,11 +32,11 @@ npm run storybook
 ```
 ## Final Product
 
-!["screenshot of map and locations created"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/user_profile.png?raw=true)
+!["Main Page"](https://github.com/Freem11/scheduler/blob/master/public/images/Main%20View.png)
 
-!["screenshot of homepage"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/user_not_logged_in.png?raw=true)
+!["Create / Edit Appointments"](https://github.com/Freem11/scheduler/blob/master/public/images/Create:Edit%20Appointment.png)
 
-!["screenshot of map creation"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/creating_a_map.png?raw=true)
+!["Cancel Confirmation"](https://github.com/Freem11/scheduler/blob/master/public/images/Cancel%20Appointment.png)
 
 !["screenshot of map creation"](https://github.com/Freem11/lhl-midterm-group11/blob/walkthrough/docs/creating_map.png?raw=true)
 
